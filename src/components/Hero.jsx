@@ -50,6 +50,31 @@ const Hero = () => {
       {/* Render the canvas only if it's not mobile */}
       {!isMobile && <ComputersCanvas />}
 
+      {/* Fallback content for mobile devices */}
+      {isMobile && (
+        <div className="absolute inset-0 flex flex-col justify-center items-center">
+          {/* Static text "Welcome to my portfolio" */}
+          <h2 className="text-[#915EFF] text-3xl sm:text-6xl font-bold">
+            Welcome to my portfolio
+          </h2>
+
+          {/* Animated "Scroll down to view more" */}
+          <motion.h3
+            className="text-white text-2xl sm:text-5xl font-extrabold mt-5"
+            animate={{
+              y: [0, 20, 0], // Move up and down
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+          >
+            Scroll down to view more
+          </motion.h3>
+        </div>
+      )}
+
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
