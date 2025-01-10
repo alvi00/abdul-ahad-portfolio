@@ -143,10 +143,10 @@ const Contact = () => {
           <p className="flex items-center gap-4 text-lg transition-transform transform hover:scale-105 hover:text-blue-400">
             📩{" "}
             <a
-              href="mailto:abdulahad36@ieee.org"
+              href="mailto:ahadraj@ieee.org"
               className=" hover:decoration-solid"
             >
-              abdulahad36@ieee.org
+              ahadraj@ieee.org
             </a>
           </p>
         </div>
