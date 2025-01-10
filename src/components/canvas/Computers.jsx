@@ -58,15 +58,10 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{
-        position: isMobile ? [5, 3, 5] : [20, 3, 5], // Adjust position for mobile
-        fov: 25,
-      }}
+      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      style={{ background: "transparent" }} // Transparent background
     >
       <Suspense fallback={<CanvasLoader />}>
-        {/* Optional: Remove this line for testing purposes */}
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
